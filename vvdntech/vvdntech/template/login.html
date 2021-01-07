@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>   
+<html>   
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<title> Login Page </title>  
+
+<style>   
+Body {  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-image:url('{% static "data/bg.jpg" %}');
+  
+}    
+ form {   
+        border: 3px solid #f1f1f1;   
+    }   
+ input[type=text], input[type=password],input[type=submit] {   
+        width: 100%;   
+        margin: 8px 0;  
+        padding: 12px 20px;   
+        display: inline-block;   
+        border: 2px solid #f1f1f1;   
+        box-sizing: border-box;   
+    }  
+ button:hover {   
+        opacity: 0.7;   
+    }   
+
+        
+     
+ .container {   
+        padding: 25px;   
+        background-color: lightblue;  
+    }   
+</style>   
+</head>    
+<body>    
+    
+    <center> <h1> Database </h1> </center>   
+    <form method="POST" action='dashboard' >  
+        {% csrf_token %}
+      
+        <div class="container">   
+            <img src='{% static "data/VVDN_logo.png" %}');>
+            <label>Username : </label>   
+            <input type="text" placeholder="Enter Username" name="username" required >  
+            <label>Password : </label>   
+            <input type="password" placeholder="Enter Password" name="password" required>  
+            <input  type="submit" placeholder="Login" name="login" value="Login">   
+            <input type="checkbox" checked="checked"> Remember me  </form> 
+            
+            
+        </div>   
+    </form>     
+</body>     
+</html>  
